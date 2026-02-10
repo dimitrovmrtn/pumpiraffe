@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSocket Test</title>
+</head>
+
+<body>
+    <h1>PumpPortal WebSocket Test</h1>
+    <div id="output"></div>
+
+    <script>
+        const outputDiv = document.getElementById('output');
+        const ws = new WebSocket('wss://pumpportal.fun/api/data');
+
+        ws.onopen = function () {
+            outputDiv.innerHTML += '<p>Connected to WebSocket</p>';
+
+            // Subscribe to token trades
+            const payload = {
+                method: "subscribeTokenTrade",
+                keys: ["7hoHfpzj9vMkWUpuKp424EoxrBxTdSaw9vSugjnpump"]
+            };
+            ws.send(JSON.stringify(payload));
+            outputDiv.innerHTML += '<p>Subscribed to 7hoH...</p>';
+        };
+
+        ws.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            console.log("Message received:", data);
+            outputDiv.innerHTML += `<p>Data: ${JSON.stringify(data)}</p>`;
+        };
+
+        ws.onerror = function (error) {
+            outputDiv.innerHTML += `<p style="color:red">Error: ${error}</p>`;
+        };
+    </script>
+</body>
+
+</html>

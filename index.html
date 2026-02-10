@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Neck Giraffe - Solana Market Cap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="savannah-container">
+        <!-- The Giraffe -->
+        <div class="giraffe-container">
+            <div class="giraffe-base">
+                <div class="body"></div>
+                <!-- The neck is split into segments or a scaleable div -->
+                <div class="neck-wrapper">
+                    <div class="neck" id="giraffe-neck">
+                        <div class="spots"></div>
+                    </div>
+                </div>
+                <div class="head">
+                    <div class="ears"></div>
+                    <div class="horns"></div>
+                    <div class="face">
+                        <div class="eyes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Overlay -->
+        <div class="ui-overlay">
+            <h1 class="title">THE LONGEST NECK</h1>
+            <div class="stats-card">
+                <div class="stat">
+                    <span class="label">Market Cap</span>
+                    <span class="value" id="market-cap">$0.00</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Neck Height</span>
+                    <span class="value" id="neck-height">2.0m</span>
+                </div>
+            </div>
+            <div class="token-info" id="token-address" title="Click to copy">
+                <code>7hoHfpzj9vMkWUpuKp424EoxrBxTdSaw9vSugjnpump</code>
+            </div>
+            <button class="music-btn" id="music-toggle">🔊 Play Music</button>
+        </div>
+
+        <!-- Audio element -->
+        <audio id="background-music" loop>
+            <source src="Pump It Up (UK Radio Edit).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
