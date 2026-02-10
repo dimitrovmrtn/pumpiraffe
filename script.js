@@ -12,7 +12,7 @@ const neckHeightEl = document.getElementById('neck-height');
 const neckDiv = document.getElementById('giraffe-neck');
 const giraffeContainer = document.querySelector('.giraffe-container');
 
-// Scroll to bottom on page load (savannah level)!
+// Scroll to bottom on page load (savannah level)
 window.addEventListener('load', () => {
     setTimeout(() => {
         window.scrollTo({
