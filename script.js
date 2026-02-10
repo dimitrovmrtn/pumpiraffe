@@ -26,7 +26,7 @@ async function fetchMarketCap() {
     try {
         // Use local proxy to fetch from pump.fun frontend API (avoids CORS)
         // Pass token address dynamically to the proxy with cache busting
-        const response = await fetch(`http://localhost:3000/mcap?token=${TOKEN_ADDRESS}&t=${Date.now()}`);
+        const response = await fetch(`https://pumpiraffe.onrender.com/mcap?token=${TOKEN_ADDRESS}&t=${Date.now()}`);
 
         if (!response.ok) {
             throw new Error(`API error: ${response.status}`);
